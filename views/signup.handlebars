@@ -1,0 +1,89 @@
+<header class="startup text-center text-white d-flex">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-lg-12 my-auto">
+                <p1 id="title">
+                    Create an Account
+                </p1>
+                <!-- create an account -->
+                <form id="signup-form">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="ftNam">
+                    <br>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="ltNam">
+                    <br>
+                    <label for="company_name">Company Name</label>
+                    <input type="text" id="company_name" name="company">
+                    <br>
+                    <label for="email-input">Email</label>
+                    <input type="text" id="email-input" name="email">
+                    <br>
+                    <label for="pwd-input1">Password</label>
+                    <input type="password" id="pwd-input1" name="pwd" required>
+                    <br>
+                    <input type="checkbox" onclick="showPwd('pwd-input1')">Show Password
+                    <br>
+                    <label for="pwd-input2">Confirm Password</label>
+                    <input type="password" id="pwd-input2" name="pwd" required>
+                    <br>
+                    <input type="checkbox" onclick="showPwd('pwd-input2')">Show Password
+                    <br>
+                    <input id="formsubmitted" type="submit" value="Sign Up">
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>
+<script type="text/javascript">
+
+    function showPwd(element) {
+        var x = document.getElementById(element);
+        if (x.type === "password"){
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
+    $("#signup-form").on("submit", function(event) {
+        event.preventDefault();
+        var ftNam = $("#first_name").val().trim();
+        var ltNam = $("#last_name").val().trim();
+        var comp = $("#company_name").val().trim();
+        var email = $("#email-input").val().trim();
+        var pwd = $("#pwd-input1").val().trim();
+
+        var newUrsData = {
+            firstName: ftNam,
+            lastName: ltNam,
+            company: comp,
+            email: email,
+            pwd: pwd
+        };
+
+        // Send the post request.
+        $.ajax("/signup/newuser", {
+            type: "POST",
+            data: newUrsData
+        }).done(function (response) {
+            // Reload the page to get the updated list
+            if (response.result === "redirect") {
+                location.href = response.url;
+            }
+
+        });
+
+        $("#first_name").val("");
+        $("#last_name").val("");
+        $("#company_name").val("");
+        $("#email-input").val("");
+        $("#pwd-input1").val("");
+        $("#pwd-input2").val("");
+
+
+    });
+
+
+</script>

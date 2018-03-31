@@ -1,0 +1,284 @@
+body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #87e08b; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+
+
+#particles-js{
+    background: linear-gradient(-90deg, rgb(189, 228, 209), rgb(101, 151, 216));
+}
+html {
+    min-height: 100%;
+     position: relative;
+     /* background-position: center;
+     background-image: url("clark.png");
+     background-size: cover; */
+   }
+
+   body {
+    font-family: 'Share Tech', sans-serif;
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    text-align: center;
+  }
+
+
+
+  .faded {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .navbar-brand {
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    /* font-family: 'Share Tech', sans-serif; */
+    font-family: 'Faster One', cursive;
+    font-family: 'Bungee Outline', cursive;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+  }
+
+  .nav-link {
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    /* font-family: 'Share Tech', sans-serif; */
+    font-family: 'Faster One', cursive;
+    font-family: 'Bungee Outline', cursive;
+    font-family: 'Orbitron', sans-serif;
+    text-align: left;
+  }
+
+  #title {
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    font-family: 'Faster One', cursive;
+    font-family: 'Bungee Outline', cursive;
+    font-size: 8vw;
+    margin-top: 200px;
+    /* font-family: 'Share Tech', sans-serif; */
+  }
+
+   header.startup {
+    /* background-position: center;
+    background-image: url("clark.png");
+    background-size: cover; */
+    height: 100%;
+    margin-top: 250px;
+    margin-bottom: 150px;
+  }
+/*
+  header.startup2 {
+    /* background-position: center;
+    background-image: url("clark.png");
+    background-size: cover; */
+    /* height: 100%;
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }  */
+
+  /* header.startup hr {
+    margin-top: 200px;
+    margin-bottom: 30px;
+  } */
+
+  /* header.startup p1 {
+    font-size: 2rem;
+    margin-top: 200px;
+  }
+   */
+
+
+
+
+
+
+  .btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 300px;
+    font-family: 'Faster One', cursive;
+    font-family: 'Bungee Outline', cursive;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .btn-xl {
+    padding: 1rem 2rem;
+    color: white;
+    /* border-color: grey; */
+  }
+
+  .btn-primary {
+    background-color: #49b5de;
+    border-color: #49b5de;
+  }
+
+  .btn-primary:hover {
+    background-color: #49b5de;
+    border-color: #49b5de;
+    border-width: 5px;
+    cursor: pointer;
+  }
+
+
+.card-header {
+  background-color: #49b5de;
+}
+
+.card {
+  background-color: rgb(112, 112, 112);
+  padding: 20px;
+  margin-top: 60px;
+  border-radius: 15px 50px 30px;
+}
+
+.cardBottom {
+  background-color: #9d9d9d;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 130px;
+  border-radius: 15px 50px 30px;
+}
+
+  .cardAbout {
+    padding-top: 75px;
+    margin-bottom: 200px;
+  }
+
+  .responsive{
+    width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    width: 300px;
+    height: 150px;
+    /* margin: 10px; */
+    transition: all 1s;
+  }
+
+  img:hover {
+    /* transform: scale(1.1); */
+  }
+
+  #blogContent {
+    font-size: 18px;
+    font-family: 'Share Tech', sans-serif;
+  }
+
+  #city-input {
+    margin-left: 6px;
+  }
+
+  #username-input {
+    margin-left: 18px;
+  }
+
+  #find-property {
+    background-color: #49b5de;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 300px;
+    font-family: 'Share Tech', sans-serif;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  #find-user {
+    background-color: #49b5de;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 300px;
+    font-family: 'Share Tech', sans-serif;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  #first_name {
+    margin-left: 33px;
+  }
+
+  #last_name {
+    margin-left: 33px;
+  }
+  #company_name {
+    margin-left: 10px;
+  }
+  #email-input {
+    margin-left: 55px;
+  }
+  #pwd-input1 {
+    margin-left: 38px;
+  }
+
+  #pwd-input2 {
+    margin-left: 2px;
+  }
+
+ #zip-input {
+   margin-left: 5px;
+ }
+
+ #state-input {
+   margin-left: 19px;
+ }
+
+ #city-input {
+   margin-left: 25px;
+ }
+
+ #title-input {
+   margin-left: 13px;
+ }
+
+ #postBlog {
+   background-color: #49b5de;
+   font-weight: 700;
+   text-transform: uppercase;
+   border-radius: 300px;
+   font-family: 'Share Tech',
+   sans-serif;
+   color: white;
+   padding: 10px;
+   margin-top: 10px;
+ }
+
+ #blog-area {
+   padding-top: 20px;
+ }
+
+ tr {
+   padding-top: 20px;
+ }
+
+ #formsubmitted {
+    background-color: #49b5de;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 300px;
+    font-family: 'Share Tech',
+    sans-serif;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+ }
+
+ /* #checkboxSign{
+   margin-left: 10px;
+ } */
+
+ .home_listings {
+   padding-top: 40px;
+ }
+
+ .form-control {
+     display: block;
+     width: 50%;
+     margin-left: auto;
+     margin-right: auto;
+     padding: .375rem .75rem;
+     font-size: 1rem;
+     line-height: 1.5;
+     color: #495057;
+     background-color: #fff;
+     background-clip: padding-box;
+     border: 1px solid #ced4da;
+     border-radius: .25rem;
+     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+ }

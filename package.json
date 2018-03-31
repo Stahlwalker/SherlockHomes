@@ -1,0 +1,32 @@
+{
+  "name": "sherlockhomes",
+  "version": "0.0.1",
+  "description": "Finding a perfect home to build memories",
+  "main": "homesServer.js",
+  "scripts": {
+    "start": "node homesServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KDarch928/sherlockHomes.git"
+  },
+  "author": "Sherlock Homes Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KDarch928/sherlockHomes/issues"
+  },
+  "homepage": "https://github.com/KDarch928/sherlockHomes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-fileupload": "^0.4.0",
+    "express-handlebars": "^3.0.0",
+    "jquery": "^3.3.1",
+    "mv": "^2.1.1",
+    "mysql": "^2.15.0",
+    "node-notifier": "^5.2.1",
+    "particlesjs": "^2.2.2",
+    "request": "^2.85.0"
+  }
+}

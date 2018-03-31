@@ -1,0 +1,74 @@
+<header class="startup text-center text-white d-flex">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-lg-12 my-auto">
+                <p1 id="title">
+                    Log in to your Account
+                </p1>
+
+                <div id="property-view"></div>
+                <!-- log into your account -->
+                <!--<form id="user-form" action="/admin" method="POST">-->
+                <form id="user-form">
+
+                    <label for="username-input">Email</label>
+                    <input type="text" id="username-input" name="username" required>
+                    <br>
+                    <label for="pwd-input">Password</label>
+                    <input type="password" id="pwd-input" name="pwd" required>
+                    <br>
+                    <input type="checkbox" onclick="showPwd()">Show Password
+                    <br>
+                    <input id="find-user" type="submit" value="Log In">
+                    <br>
+                    <br>
+                    <a href="/signup">New to Sherlock Homes? &nbsp;
+                        <span>Sign Up</span>
+                    </a>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+</header>
+
+<script type="text/javascript">
+
+    function showPwd() {
+        var x = document.getElementById("pwd-input");
+        if (x.type === "password"){
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
+    $("#user-form").on("submit", function(event) {
+        event.preventDefault();
+
+        var usrNam = $("#username-input").val().trim();
+        var pwd = $("#pwd-input").val().trim();
+
+        console.log(pwd);
+        var collectedData = {
+            username: usrNam,
+            pwd: pwd
+        };
+
+        // Send the post request.
+        $.ajax("/login", {
+            type: "POST",
+            data: collectedData
+        }).done( function(response) {
+                    // Reload the page to get the updated list
+                    if (response.result === "redirect") {
+                        location.href = response.url;
+                    }
+                }
+        );
+    });
+
+</script>
